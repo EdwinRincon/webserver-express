@@ -12,6 +12,7 @@
   * [Built With](#built-with)
   * [Prerequisites](#prerequisites)
   * [Usage](#usage)
+  * [Deploy](#deploy)
 
 * [License](#license)
 * [Contact](#contact)
@@ -55,6 +56,10 @@ npm install
 Se introduce en el formulario los datos de una candela en el stock del EURO/DOLAR
 al aceptar los datos, las redes neuronales empezarán a trabajar, el proceso toma un tiempo (15 minutos aprox)
 
+## Deploy
+Heroku
+
+* https://stock-nn.herokuapp.com/
 
 <!-- LICENSE -->
 ## License
