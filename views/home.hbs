@@ -1,13 +1,39 @@
-
 {{> head }}
 
-    {{> navbar }}
-    <div class="jumbotron">
-        <h1 class="display-4">Hello, {{capitalizar nombre}}!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
-            featured content or information.</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+<div class="container">
+    <div style="text-align:center">
+        <h2>Stock Market Prediction</h2>
+        <p>EUR/USD</p>
     </div>
+    <div class="row">
+        <div class="column">
+            <img src="assets/img/stock-min.jpg" class="img-fluid">
+        </div>
+        <div class="column">
+            <form>
+                <label for="papertura">Precio Apertura</label>
+                <input type="text" id="apertura" name="apertura" placeholder="1.16607" maxlength="7" minlength="7"required>
+                <label for="pmaximo">Precio Máximo</label>
+                <input type="text" id="maximo" name="maximo" placeholder="1.17455" maxlength="7" minlength="7" required>
+                <label for="pminimo">Precio Mínimo</label>
+                <input type="text" id="minimo" name="minimo" placeholder="1.16552" maxlength="7" minlength="7" required>
+                <div class="form-group">
+                    <input type="button" class="btn btn-primary" id="Aceptar" onclick="Brain()" value="Aceptar" style="width: 100%;">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div id="result"></div>
+        </div>
+        <div class="column">
+            <div id="divColorResult">
+                <h2 id="resultadoFormatBUY"></h2>
+                <h2 id="resultadoFormatSELL"></h2>
+                <h2 id="resultadoFormatSAME"></h2>
+            </div>
+        </div>
+    </div>
+</div>
 {{> footer }}
