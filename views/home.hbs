@@ -11,6 +11,14 @@
         </div>
         <div class="column">
             <form>
+            <label for="sel1">Seleccionar el numero de HiddenLayers que utilizará la red neuronal</label>
+            <select class="form-control" id="selectHL" name="sellist1">
+        <option>5</option>
+        <option>10</option>
+        <option>20</option>
+        <option>30</option>
+        <option>40</option>
+      </select>
                 <label for="papertura">Precio Apertura</label>
                 <input type="text" id="apertura" name="apertura" placeholder="1.16607" maxlength="7" minlength="7"required>
                 <label for="pmaximo">Precio Máximo</label>
@@ -18,10 +26,13 @@
                 <label for="pminimo">Precio Mínimo</label>
                 <input type="text" id="minimo" name="minimo" placeholder="1.16552" maxlength="7" minlength="7" required>
                 <div class="form-group">
-                    <input type="button" class="btn btn-primary" id="Aceptar" onclick="Brain()" value="Aceptar" style="width: 100%;">
+                    <input type="button" class="btn btn-primary" id="Aceptar" onclick="Spinner()" value="Aceptar" style="width: 100%;">
                 </div>
             </form>
         </div>
+    </div>
+    <div class="row" style="display: flex; justify-content: center;">
+        <div class="spinner-border text-info" id="loading" style="display: none;"></div>
     </div>
     <div class="row">
         <div class="column">

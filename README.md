@@ -22,7 +22,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="public/assets/img/demo.jpg" alt="Logo">
+<img src="public/assets/img/demo.JPG" alt="Logo">
 
 
 ### Built With

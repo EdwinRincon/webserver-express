@@ -2,19 +2,30 @@ document.getElementById("apertura").value = '';
 document.getElementById("maximo").value= '';
 document.getElementById("minimo").value= '';
 
+function Spinner() {
+document.getElementById('loading').style.display = 'flex';
+setTimeout(() => {
+    Brain();
+}, 500);
+}
+
 function Brain() {
+    
     document.getElementById("resultadoFormatBUY").value= '';
     document.getElementById("resultadoFormatSELL").value= '';
     document.getElementById("resultadoFormatSAME").value= '';
     
-        const network = new brain.NeuralNetwork({
-            hiddenLayers: [50]
+    const hiddenLayersSelect = document.getElementById('selectHL').value;
+    
+    const network = new brain.NeuralNetwork({
+            hiddenLayers: [hiddenLayersSelect]
         });
     
         let v_apertura = 0
         let v_maximo = 0
         let v_minimo = 0
     
+
     network.train([
     {input: {apertura:1.43340,maximo:1.43420,minimo:1.42800},output:{BUY:1}},
     {input: {apertura:1.43370,maximo:1.43710,minimo:1.43300},output:{SELL:1}},
@@ -10407,12 +10418,13 @@ function Brain() {
     v_maximo =  document.getElementById("maximo").value;
     v_minimo = document.getElementById("minimo").value;
      
-    let result = network.run({apertura:v_apertura,maximo:v_maximo,minimo:v_minimo});
-    
+    let result =  network.run({apertura:v_apertura,maximo:v_maximo,minimo:v_minimo});
+
     let buy_value = result.BUY*100;
     let sell_value = result.SELL*100;
     let same_value = result.SAME*100;
     
+    document.getElementById('loading').style.display = 'none';
     document.getElementById("resultadoFormatBUY").innerHTML = `BUY: ${buy_value.toFixed(4)}%`;
     document.getElementById("resultadoFormatSELL").innerHTML = `SELL: ${sell_value.toFixed(4)}%`;
     document.getElementById("resultadoFormatSAME").innerHTML = `SAME: ${same_value.toFixed(4)}%`;
