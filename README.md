@@ -51,7 +51,7 @@ npm install
 ```
 
 ## Usage
-Choose how many Hidden Layers you want,t he larger the number of hidden layers in a neural network, the longer it will take for the neural network to produce the output and the more complex problems the neural network can solve.Introduce your inputs about one candle from the stock of EUR/USD, (4H timeframe recommend for higher accurate) but still working in whatever timeframe you want, then select the ACCEPT button and wait about 4 minutes, for 5 Hidden Layers default.
+Choose how many Hidden Layers you want, the larger the number of hidden layers in a neural network, the longer it will take for the neural network to produce the output and the more complex problems the neural network can solve.Introduce your inputs about one candle from the stock of EUR/USD, (4H timeframe recommend for higher accurate) but still working in whatever timeframe you want, then select the ACCEPT button and wait about 4 minutes, for 5 Hidden Layers default.
 
 ## Deploy
 Heroku
