@@ -50,18 +50,10 @@ This is an example of how to list things you need to use the software and how to
 npm install 
 ```
 
-<!-- USAGE EXAMPLES -->
 ## Usage
-
-Se introduce en el formulario los datos de una candela en el stock del EURO/DOLAR
-al aceptar los datos, las redes neuronales empezarán a trabajar, el proceso toma un tiempo (15 minutos aprox)
+Choose how many Hidden Layers you want,t he larger the number of hidden layers in a neural network, the longer it will take for the neural network to produce the output and the more complex problems the neural network can solve.Introduce your inputs about one candle from the stock of EUR/USD, (4H timeframe recommend for higher accurate) but still working in whatever timeframe you want, then select the ACCEPT button and wait about 4 minutes, for 5 Hidden Layers default.
 
 ## Deploy
 Heroku
 
 * https://stock-nn.herokuapp.com/
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
